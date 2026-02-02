@@ -1,90 +1,87 @@
 body {
   background: rgba(96, 185, 249, 0.876);
-  margin: 2px; 
+  margin: 0;
   min-height: 100vh;
+  font-family: Lexend, sans-serif;
 
   display: flex;
   justify-content: center;
-  align-items: center;
-
-  font-family: Lexend, sans-serif;
 }
 
 * {
   color: white;
-}
-
-
-.experience {
-  margin-left: 110px;
+  box-sizing: border-box;
 }
 
 .resume {
   width: 900px;
   max-width: 95%;
+  padding: 16px;
 }
-
 
 .top {
   display: flex;
   flex-direction: column;   
   align-items: center;
-  gap: 17px;
-  text-align: center;
-}
-
-.name {
+  gap: 20px;
   text-align: center;
 }
 
 
-.certs {
-  text-align: center;
-  max-width: 300px;
+.name,
+.certs,
+.education {
   width: 100%;
+  max-width: 320px;
 }
+
 
 .certs ul {
   list-style-position: inside;
-  padding-left: 0;
+  padding: 0;
+  margin: 8px 0 0;
 }
 
 
-.education {
-  text-align: center;
-  max-width: 240px;
-  width: 100%;
-  margin-left: -90px;
+.experience {
+  margin-top: 24px;
+}
+
+.experience ul {
+  padding-left: 18px;
+}
+
+.experience p {
+  margin-top: 16px;
+  margin-bottom: 6px;
 }
 
 
-@media print {
-  @page {
-    size: landscape;
-    margin: 0.5in;
-  }
+@media (min-width: 900px) {
 
   body {
-    background: rgba(96, 185, 249, 0.876);
+    display: block;
+    margin: 0;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    margin: 0;
-    display: block;
   }
 
   .top {
-    flex-direction: row;          
+    flex-direction: row;         
     justify-content: space-between;
     align-items: flex-start;
+    text-align: left;
     gap: 40px;
-    text-align: left;
   }
 
+  .name {
+    flex: 1.2;               
+  }
+
+  .certs,
   .education {
-    text-align: left;
-  }
-
-  .certs {
-    text-align: left;
+    flex: 1;
+    max-width: none;
   }
 }
+
